@@ -27,5 +27,13 @@ describe("SpaceAger", () => {
     
     let ageSpace = new SpaceAger(25,favColor);
     expect(ageSpace.favColor).toEqual(favColor);
-  }) 
+  })
+
+  test("If the user selects a color, it should correctly display their life expectancy on earth.",() => {
+    const favColor = "blue";
+    const userAge = 25;
+
+    let ageSpace = new SpaceAger(userAge,favColor);
+    expect(ageSpace.checkLifeExpectancy()).toEqual(100);
+  })
 })
