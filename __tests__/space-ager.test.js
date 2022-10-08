@@ -1,3 +1,4 @@
+import { TestScheduler } from "jest";
 import SpaceAger from "./../src/space-ager";
 
 describe("SpaceAger", () => {
@@ -6,5 +7,16 @@ describe("SpaceAger", () => {
 
     const ageSpace = new SpaceAger(userAge);
     expect(ageSpace.earthAge).toEqual(userAge);
+  })
+
+  test("Should create a new class object that will store the age for Mercury,Venus,Mars and Jupiter", () => {
+    const userAge = 46;
+
+    const ageSpace = new SpaceAger(userAge);
+    expect(ageSpace.earthAge).toEqual(userAge);
+    expect(ageSpace.mercuryAge).toEqual(userAge/0.24);
+    expect(ageSpace.venusAge).toEqual(userAge/0.62);
+    expect(ageSpace.marsAge).toEqual(userAge/1.88);
+    expect(ageSpace.jupiterAge).toEqual(userAge/11.86);
   })
 })
