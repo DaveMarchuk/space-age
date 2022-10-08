@@ -32,35 +32,31 @@ export default class SpaceAger  {
     for (let i = 0; i < 5; i++)  {
       if  (i === 0) {
         planetYears -= this.earthAge;
-        planetLifeLeft.push(Math.round(planetYears));
+        planetLifeLeft.push(Math.round(Math.abs(planetYears)));
       }
 
       if  (i === 1) {
         planetYears = planetYears / 0.24;
         planetYears -= this.mercuryAge;
-        console.log(Math.round(planetYears));
-        planetLifeLeft.push(Math.round(planetYears)); 
+        planetLifeLeft.push(Math.round(Math.abs(planetYears))); 
       }
 
       if  (i === 2) {
         planetYears = planetYears / 0.62;
         planetYears -= this.venusAge;
-        console.log(Math.round(planetYears));
-        planetLifeLeft.push(Math.round(planetYears));
+        planetLifeLeft.push(Math.round(Math.abs(planetYears)));
       }
 
       if  (i === 3) {
         planetYears = planetYears / 1.88;
         planetYears -= this.marsAge;
-        console.log(Math.round(planetYears));
-        planetLifeLeft.push(Math.round(planetYears));
+        planetLifeLeft.push(Math.round(Math.abs(planetYears)));
       }
 
       if  (i === 4) {
         planetYears = planetYears / 11.86;
         planetYears -= this.jupiterAge;
-        console.log(Math.round(planetYears));
-        planetLifeLeft.push(Math.round(planetYears));
+        planetLifeLeft.push(Math.round(Math.abs(planetYears)));
       }
 
       planetYears = this.checkLifeExpectancy();
