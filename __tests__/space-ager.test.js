@@ -18,8 +18,6 @@ describe("SpaceAger", () => {
     expect(ageSpace.venusAge).toEqual(userAge/0.62);
     expect(ageSpace.marsAge).toEqual(userAge/1.88);
     expect(ageSpace.jupiterAge).toEqual(userAge/11.86);
-    console.log(ageSpace.jupiterAge);
-    console.log(ageSpace.mercuryAge);
   })
 
   test("Will test if user is able to store their favorite color",() =>  {
@@ -68,5 +66,13 @@ describe("SpaceAger", () => {
     let ageSpace = new SpaceAger(userAge,favColor);
     ageSpace.checkLifeExpectancy();
     expect(ageSpace.lifeExpectancy).toEqual(60);
+  })
+
+  test("Will test if the user inputs an invalid color, it should return 0", ()=>  {
+    const favColor = "pink";
+    const userAge = 25;
+
+    let ageSpace = new SpaceAger(userAge,favColor);
+    expect(ageSpace.checkLifeExpectancy()).toEqual(0);
   })
 })
