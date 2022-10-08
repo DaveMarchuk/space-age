@@ -10,7 +10,7 @@ describe("SpaceAger", () => {
   })
 
   test("Should create a new class object that will store the age for Mercury,Venus,Mars and Jupiter", () => {
-    const userAge = 46;
+    const userAge = 25;
 
     const ageSpace = new SpaceAger(userAge);
     expect(ageSpace.earthAge).toEqual(userAge);
@@ -18,5 +18,7 @@ describe("SpaceAger", () => {
     expect(ageSpace.venusAge).toEqual(userAge/0.62);
     expect(ageSpace.marsAge).toEqual(userAge/1.88);
     expect(ageSpace.jupiterAge).toEqual(userAge/11.86);
+    console.log(ageSpace.jupiterAge);
+    console.log(ageSpace.mercuryAge);
   })
 })
