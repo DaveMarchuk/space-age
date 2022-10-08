@@ -13,7 +13,10 @@ export default class SpaceAger  {
 
     if  (this.favColor === "blue")  {
       lifeExpectancy = 100;
-      return lifeExpectancy;
-    } else  return lifeExpectancy;
+      return lifeExpectancy, lifeExpectancy - this.earthAge;
+    } else if (this.favColor === "red") {
+      lifeExpectancy = 50;
+      return lifeExpectancy, lifeExpectancy - this.earthAge;
+    }
   }
 }

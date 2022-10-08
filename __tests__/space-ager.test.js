@@ -34,7 +34,7 @@ describe("SpaceAger", () => {
     const userAge = 25;
 
     let ageSpace = new SpaceAger(userAge,favColor);
-    expect(ageSpace.checkLifeExpectancy()).toEqual(100);
+    expect(ageSpace.checkLifeExpectancy()).toEqual(100,75);
   })
 
   test("Should return the users life expectancy and how many years they have left to live.", () => {
