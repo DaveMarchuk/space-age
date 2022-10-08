@@ -82,7 +82,6 @@ describe("SpaceAger", () => {
 
     let ageSpace = new SpaceAger(userAge,favColor);
     expect(ageSpace.leftToLive()).toEqual([75,313,121,40,6]);
-    console.log(ageSpace.leftToLive());
   })
 
   test("leftToLive method needs to return number of years the user lived past life expectancy", ()=>  {
@@ -91,6 +90,5 @@ describe("SpaceAger", () => {
 
     let ageSpace = new SpaceAger(userAge,favColor);
     expect(ageSpace.leftToLive()).toEqual([25,104,40,13,2]);
-    console.log(ageSpace.leftToLive());
   })
 })
