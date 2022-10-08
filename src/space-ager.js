@@ -24,4 +24,48 @@ export default class SpaceAger  {
       return this.lifeExpectancy;
     } else  return this.lifeExpectancy;
   }
+
+  leftToLive()  {
+    let planetLifeLeft = [];
+    let planetYears = this.checkLifeExpectancy();
+
+    for (let i = 0; i < 5; i++)  {
+      if  (i === 0) {
+        planetYears -= this.earthAge;
+        planetLifeLeft.push(Math.round(planetYears));
+      }
+
+      if  (i === 1) {
+        planetYears = planetYears / 0.24;
+        planetYears -= this.mercuryAge;
+        console.log(Math.round(planetYears));
+        planetLifeLeft.push(Math.round(planetYears)); 
+      }
+
+      if  (i === 2) {
+        planetYears = planetYears / 0.62;
+        planetYears -= this.venusAge;
+        console.log(Math.round(planetYears));
+        planetLifeLeft.push(Math.round(planetYears));
+      }
+
+      if  (i === 3) {
+        planetYears = planetYears / 1.88;
+        planetYears -= this.marsAge;
+        console.log(Math.round(planetYears));
+        planetLifeLeft.push(Math.round(planetYears));
+      }
+
+      if  (i === 4) {
+        planetYears = planetYears / 11.86;
+        planetYears -= this.jupiterAge;
+        console.log(Math.round(planetYears));
+        planetLifeLeft.push(Math.round(planetYears));
+      }
+
+      planetYears = this.checkLifeExpectancy();
+    }
+
+    return planetLifeLeft;
+  }
 }

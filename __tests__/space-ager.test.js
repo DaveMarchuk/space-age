@@ -81,6 +81,7 @@ describe("SpaceAger", () => {
     const userAge = 25;
 
     let ageSpace = new SpaceAger(userAge,favColor);
-    expect(ageSpace.leftToLive()).toEqual([75,ageSpace.jupiterAge])
+    expect(ageSpace.leftToLive()).toEqual([75,313,121,40,6]);
+    console.log(ageSpace.leftToLive());
   })
 })
