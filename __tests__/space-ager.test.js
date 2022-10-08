@@ -60,4 +60,13 @@ describe("SpaceAger", () => {
     let ageSpace = new SpaceAger(userAge,favColor);
     expect(ageSpace.checkLifeExpectancy()).toEqual(60);
   })
+
+  test("Will test life expectancy being stored correctly in SpaceAger class object.", () => {
+    const favColor = "yellow";
+    const userAge = 25;
+
+    let ageSpace = new SpaceAger(userAge,favColor);
+    ageSpace.checkLifeExpectancy();
+    expect(ageSpace.lifeExpectancy).toEqual(60);
+  })
 })
