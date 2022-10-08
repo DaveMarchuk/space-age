@@ -6,24 +6,23 @@ export default class SpaceAger  {
     this.marsAge = userAge/1.88;
     this.jupiterAge = userAge/11.86;
     this.favColor = userColor;
+    this.lifeExpectancy = 0;
   }
 
   checkLifeExpectancy() {
-    let lifeExpectancy = 0;
-
     if  (this.favColor === "blue")  {
-      lifeExpectancy = 100;
-      return lifeExpectancy;
+      this.lifeExpectancy = 100;
+      return this.lifeExpectancy;
     } else if (this.favColor === "red") {
-      lifeExpectancy = 50;
-      return lifeExpectancy;
+      this.lifeExpectancy = 50;
+      return this.lifeExpectancy;
     } else if (this.favColor === "green") {
-      lifeExpectancy = 80;
-      return lifeExpectancy;
+      this.lifeExpectancy = 80;
+      return this.lifeExpectancy;
     } else if (this.favColor === "yellow")  {
-      lifeExpectancy = 60;
-      return lifeExpectancy;
+      this.lifeExpectancy = 60;
+      return this.lifeExpectancy;
     }
-    return lifeExpectancy;
+    return this.lifeExpectancy;
   }
 }
