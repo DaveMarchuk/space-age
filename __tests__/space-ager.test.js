@@ -75,4 +75,12 @@ describe("SpaceAger", () => {
     let ageSpace = new SpaceAger(userAge,favColor);
     expect(ageSpace.checkLifeExpectancy()).toEqual(0);
   })
+
+  test("Method should successfully take the value from checkLifeExpectancy and set the remaining life left for all the planets", ()=>  {
+    const favColor = "blue";
+    const userAge = 25;
+
+    let ageSpace = new SpaceAger(userAge,favColor);
+    expect(ageSpace.leftToLive()).toEqual([75,ageSpace.jupiterAge])
+  })
 })
