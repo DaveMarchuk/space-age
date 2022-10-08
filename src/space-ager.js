@@ -17,6 +17,9 @@ export default class SpaceAger  {
     } else if (this.favColor === "red") {
       lifeExpectancy = 50;
       return lifeExpectancy;
+    } else if (this.favColor === "green") {
+      lifeExpectancy = 80;
+      return lifeExpectancy;
     } return lifeExpectancy;
   }
 }
